@@ -16,7 +16,7 @@ const playRound = (playerSelection, computerSelection) => {
   }
 
   return playerSelection ===
-    choices[(choices.indexOf(computerSelection) + 1) % choices.length]
+    choices[(choices.indexOf(computerSelection) + 1) % 3]
     ? `You Win! ${playerSelection} beats ${computerSelection}`
     : `You Lose! ${computerSelection} beats ${playerSelection}`;
 };

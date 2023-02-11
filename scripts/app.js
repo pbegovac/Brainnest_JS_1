@@ -1,15 +1,17 @@
+alert("Play five rounds of rock, paper, scissors against the computer");
+const choices = ["rock", "paper", "scissors"];
+let playerSelection;
+let computerSelection;
+
 const getComputerChoice = () => {
-  return ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)];
+  return choices[Math.floor(Math.random() * 3)];
 };
 
-const playRound = (playerSelection, computerSelection) => {
-  const choices = ["rock", "paper", "scissors"];
-  playerSelection = playerSelection.toLowerCase().trim();
-  computerSelection = computerSelection.toLowerCase();
-
-  if (playerSelection === "") {
-    return;
-  }
+const playRound = () => {
+  playerSelection = prompt("Choose Rock, Paper or Scissors:")
+    .toLowerCase()
+    .trim();
+  computerSelection = getComputerChoice();
 
   if (choices.indexOf(playerSelection) === -1) {
     return "Invalid selection. Please choose Rock, Paper or Scissors.";
@@ -28,13 +30,10 @@ const playRound = (playerSelection, computerSelection) => {
 const game = () => {
   let playerScore = 0;
   let computerScore = 0;
-  alert("Play five rounds of rock, paper, scissors against the computer");
 
   let i = 0;
   while (i < 5) {
-    const playerSelection = prompt("Choose Rock, Paper or Scissors:");
-    const computerSelection = getComputerChoice();
-    const result = playRound(playerSelection, computerSelection);
+    const result = playRound();
     console.log(i + 1 + ". " + result);
     if (result.includes("Win")) {
       playerScore++;
@@ -46,6 +45,8 @@ const game = () => {
       console.log(
         "Player score: " + playerScore + " Computer score: " + computerScore
       );
+    } else if (result.includes("Invalid")) {
+      i--;
     }
     i++;
   }

@@ -22,6 +22,7 @@ const playRound = (playerSelection, computerSelection) => {
 };
 
 const game = () => {
+  alert("Play rock, paper, scissors against the computer");
   let playerScore = 0;
   let computerScore = 0;
 

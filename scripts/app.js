@@ -22,7 +22,7 @@ const playRound = (playerSelection, computerSelection) => {
 };
 
 const game = () => {
-  alert("Play rock, paper, scissors against the computer");
+  alert("Play five rounds of rock, paper, scissors against the computer ");
   let playerScore = 0;
   let computerScore = 0;
 
@@ -34,18 +34,24 @@ const game = () => {
     console.log(result);
     if (result.includes("Win")) {
       playerScore++;
+      console.log(
+        "Player score: " + playerScore + " Computer score: " + computerScore
+      );
     } else if (result.includes("Lose")) {
       computerScore++;
+      console.log(
+        "Player score: " + playerScore + " Computer score: " + computerScore
+      );
     }
     i++;
   }
 
   if (playerScore > computerScore) {
-    console.log("You win the game!");
+    console.log("Final result: You win the game!");
   } else if (playerScore < computerScore) {
-    console.log("You lose the game.");
+    console.log("Final result: You lose the game.");
   } else {
-    console.log("It's a tie.");
+    console.log("Final result: It's a tie.");
   }
 };
 

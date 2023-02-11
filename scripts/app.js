@@ -1,10 +1,12 @@
+alert("Play five rounds of rock, paper, scissors against the computer ");
+
 const getComputerChoice = () => {
   return ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)];
 };
 
 const playRound = (playerSelection, computerSelection) => {
   const choices = ["rock", "paper", "scissors"];
-  playerSelection = playerSelection.toLowerCase();
+  playerSelection = playerSelection.toLowerCase().trim();
   computerSelection = computerSelection.toLowerCase();
 
   if (choices.indexOf(playerSelection) === -1) {
@@ -22,7 +24,6 @@ const playRound = (playerSelection, computerSelection) => {
 };
 
 const game = () => {
-  alert("Play five rounds of rock, paper, scissors against the computer ");
   let playerScore = 0;
   let computerScore = 0;
 

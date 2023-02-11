@@ -7,7 +7,7 @@ const playRound = (playerSelection, computerSelection) => {
   playerSelection = playerSelection.toLowerCase().trim();
   computerSelection = computerSelection.toLowerCase();
 
-  if (playerSelection === null) {
+  if (playerSelection === "") {
     return;
   }
 

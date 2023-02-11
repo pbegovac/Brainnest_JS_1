@@ -1,5 +1,3 @@
-alert("Play five rounds of rock, paper, scissors against the computer ");
-
 const getComputerChoice = () => {
   return ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)];
 };
@@ -24,6 +22,8 @@ const playRound = (playerSelection, computerSelection) => {
 };
 
 const game = () => {
+  alert("Play five rounds of rock, paper, scissors against the computer ");
+
   let playerScore = 0;
   let computerScore = 0;
 
@@ -32,7 +32,7 @@ const game = () => {
     const playerSelection = prompt("Choose Rock, Paper or Scissors:");
     const computerSelection = getComputerChoice();
     const result = playRound(playerSelection, computerSelection);
-    console.log(result);
+    console.log(i + 1 + ". " + result);
     if (result.includes("Win")) {
       playerScore++;
       console.log(

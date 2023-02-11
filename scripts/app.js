@@ -22,10 +22,9 @@ const playRound = (playerSelection, computerSelection) => {
 };
 
 const game = () => {
-  alert("Play five rounds of rock, paper, scissors against the computer ");
-
   let playerScore = 0;
   let computerScore = 0;
+  alert("Play five rounds of rock, paper, scissors against the computer");
 
   let i = 0;
   while (i < 5) {

@@ -1,17 +1,15 @@
 alert("Play five rounds of rock, paper, scissors against the computer");
 const choices = ["rock", "paper", "scissors"];
-let playerSelection;
-let computerSelection;
 
 const getComputerChoice = () => {
   return choices[Math.floor(Math.random() * 3)];
 };
 
 const playRound = () => {
-  playerSelection = prompt("Choose Rock, Paper or Scissors:")
+  let playerSelection = prompt("Choose Rock, Paper or Scissors:")
     .toLowerCase()
     .trim();
-  computerSelection = getComputerChoice();
+  let computerSelection = getComputerChoice();
 
   if (choices.indexOf(playerSelection) === -1) {
     return "Invalid selection. Please choose Rock, Paper or Scissors.";

@@ -7,6 +7,10 @@ const playRound = (playerSelection, computerSelection) => {
   playerSelection = playerSelection.toLowerCase().trim();
   computerSelection = computerSelection.toLowerCase();
 
+  if (playerSelection === null) {
+    return;
+  }
+
   if (choices.indexOf(playerSelection) === -1) {
     return "Invalid selection. Please choose Rock, Paper or Scissors.";
   }
